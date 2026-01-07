@@ -1,4 +1,5 @@
 // frontend/entrypoints/inertia.js
+import './application.css'
 import { createInertiaApp } from '@inertiajs/react'
 import { createElement } from 'react'
 import { createRoot } from 'react-dom/client'
