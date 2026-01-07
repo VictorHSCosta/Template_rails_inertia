@@ -7,10 +7,15 @@ import Layout from '../components/Layout'
 createInertiaApp({
   resolve: (name) => {
     const pages = import.meta.glob('../pages/**/*.jsx', { eager: true })
-    let page = pages[`../pages/${name}.jsx`]
+    const page = pages[`../pages/${name}.jsx`]
 
-    // Se a página NÃO tiver um layout próprio, aplica o Layout padrão
-    page.default.layout = page.default.layout || (() => createElement(Layout, { children: page }))
+    if (!page?.default) {
+      console.error(`Página ou default export não encontrado para: ${name}`)
+      return page
+    }
+
+    // Define o layout se não existir um específico na página
+    page.default.layout = page.default.layout || ((pageComponent) => createElement(Layout, { children: pageComponent }))
 
     return page
   },
