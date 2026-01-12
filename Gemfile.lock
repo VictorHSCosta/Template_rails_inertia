@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    action_policy (0.7.5)
+      ruby-next-core (>= 1.0)
     action_text-trix (2.1.15)
       railties
     actioncable (8.1.1)
@@ -134,6 +136,7 @@ GEM
     factory_bot_rails (6.5.1)
       factory_bot (~> 6.5)
       railties (>= 6.1.0)
+    ffi (1.17.2)
     ffi (1.17.2-aarch64-linux-gnu)
     ffi (1.17.2-aarch64-linux-musl)
     ffi (1.17.2-arm-linux-gnu)
@@ -193,7 +196,9 @@ GEM
     mini_magick (5.3.1)
       logger
     mini_mime (1.1.5)
-    minitest (5.26.0)
+    mini_portile2 (2.8.9)
+    minitest (6.0.1)
+      prism (~> 1.5)
     msgpack (1.8.0)
     mutex_m (0.3.0)
     net-imap (0.5.12)
@@ -211,6 +216,9 @@ GEM
       net-protocol
     net-ssh (7.3.0)
     nio4r (2.7.5)
+    nokogiri (1.18.10)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.18.10-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.18.10-aarch64-linux-musl)
@@ -354,6 +362,7 @@ GEM
       rubocop (>= 1.72)
       rubocop-performance (>= 1.24)
       rubocop-rails (>= 2.30)
+    ruby-next-core (1.1.2)
     ruby-progressbar (1.13.0)
     ruby-vips (2.2.5)
       ffi (~> 1.12)
@@ -405,7 +414,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
-    unicode-emoji (4.1.0)
+    unicode-emoji (4.2.0)
     uri (1.1.0)
     useragent (0.16.11)
     vite_rails (3.0.19)
@@ -444,6 +453,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  action_policy
   bootsnap
   brakeman
   bundler-audit
