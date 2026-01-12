@@ -27,6 +27,7 @@ export default [
         window: 'readonly',
         document: 'readonly',
         navigator: 'readonly',
+        console: 'readonly',
       },
       parserOptions: {
         ecmaFeatures: { jsx: true },

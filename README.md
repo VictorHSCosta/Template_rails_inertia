@@ -27,6 +27,23 @@ bin/rails db:setup
 
 ## ⚙️ Configurações principais
 
+### Postgres
+
+Para instalar o postgres escolha uma dessas opcoes abaixo de acordo com seu sistema operacional
+
+ - Install the pg driver:
+   `gem install pg`
+ - On macOS with Homebrew:
+   `gem install pg -- --with-pg-config=/opt/homebrew/bin/pg_config`
+ - On Windows:
+   `gem install pg`
+     - Choose the win32 build.
+     - Install PostgreSQL and put its /bin directory on your path.
+
+ Configure Using Gemfile
+ gem "pg"
+
+
 ### 🧠 Ambiente
 
 * Ruby: use a versão definida em `.ruby-version`
