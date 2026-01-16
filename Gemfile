@@ -80,3 +80,5 @@ gem "vite_rails", "~> 3.0"
 gem "devise", "~> 4.9"
 
 gem "panko_serializer"
+
+gem "action_policy"

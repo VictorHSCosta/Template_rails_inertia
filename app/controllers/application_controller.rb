@@ -11,6 +11,8 @@ class ApplicationController < ActionController::Base
 
   # serializer helper method using Panko
   def serializer(resource, serializer_class)
+    return nil unless resource
+
     if resource.is_a?(Array) || resource.is_a?(ActiveRecord::Relation)
       JSON.parse(Panko::ArraySerializer.new(resource, each_serializer: serializer_class).to_json)
     else
